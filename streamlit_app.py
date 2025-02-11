@@ -6,4 +6,16 @@ from sklearn.ensemble import RandomForestClassifier
 st.title('🎈 Tmrt Model Learning')
 
 st.info("This is a analysis of the dedication of tmrt members")
-st.write('Hello world!')
+
+with st.expander('TMRT DATA'):
+  st.write('**DATA TABLE**')
+  df = pd.read_csv('https://github.com/Shriya-Shetty/Model_Data/blob/efb7989b424d56fbfba763b46f1a62a5f0c129e9/Tmrt_hours.csv')
+  df
+
+  st.write('**X**')
+  X_raw = df.drop('time difference', axis=4)
+  X_raw
+
+  st.write('**Y**')
+  y_raw = df.time difference
+  y_raw
